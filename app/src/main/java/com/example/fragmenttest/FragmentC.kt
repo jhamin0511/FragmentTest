@@ -39,8 +39,7 @@ class FragmentC : BaseFragment() {
         popback_c_to_a.setOnClickListener {
             val bundle = Bundle()
             bundle.putString("MESSAGE", "POPBACK C TO A")
-            setResult(Activity.RESULT_OK, bundle)
-            finish(FragmentA::class.java.simpleName)
+            finish(FragmentA::class.java.simpleName, bundle)
         }
 
 

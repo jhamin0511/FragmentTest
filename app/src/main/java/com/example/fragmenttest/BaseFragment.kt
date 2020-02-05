@@ -3,8 +3,10 @@ package com.example.fragmenttest
 import android.app.Activity.RESULT_CANCELED
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.annotation.GuardedBy
 import androidx.fragment.app.Fragment
+import java.util.logging.Logger
 
 open class BaseFragment : Fragment() {
 
@@ -65,13 +67,11 @@ open class BaseFragment : Fragment() {
         getBaseActivity().popBackFragment()
     }
 
-    fun finish(tag: String) {
+    fun finish(tag: String, bundle: Bundle? = null) {
         val targetFragment = getBaseActivity().getFragment(tag)
 
         if (targetFragment is BaseFragment) {
-            val requestCode = targetRequestCode
-
-            targetFragment.onFragmentResult(requestCode, mResultCode, mResultData)
+            targetFragment.onBackFragment(bundle)
         }
         getBaseActivity().popBackFragment(tag, 0)
     }
@@ -89,6 +89,10 @@ open class BaseFragment : Fragment() {
     }
 
     open fun onFragmentResult(requestCode: Int, resultCode: Int, data: Bundle?) {
+        Log.i("BaseFragment", "requestCode [${requestCode}] / resultCode [${resultCode}]")
+    }
+
+    open fun onBackFragment(data: Bundle?){
 
     }
 

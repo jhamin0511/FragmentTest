@@ -9,7 +9,7 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.fragment_a.finish
 import kotlinx.android.synthetic.main.fragment_b.*
 
-private const val requestCodeB = 1000
+private const val requestCodeB = 2000
 
 class FragmentB : BaseFragment() {
 

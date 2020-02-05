@@ -55,4 +55,11 @@ class FragmentA : BaseFragment() {
         Toast.makeText(requireContext(), data.getString("MESSAGE"), Toast.LENGTH_SHORT).show()
     }
 
+    override fun onBackFragment(data: Bundle?) {
+        super.onBackFragment(data)
+
+        data?.let {
+            Toast.makeText(requireContext(), data.getString("MESSAGE"), Toast.LENGTH_SHORT).show()
+        }
+    }
 }
