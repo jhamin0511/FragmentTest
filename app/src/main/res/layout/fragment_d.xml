@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FRAGMENT D"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/add_d_to_a"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Add D to A"
+        app:layout_constraintStart_toEndOf="@+id/replace_d_to_a"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <Button
+        android:id="@+id/replace_d_to_a"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="replace D to A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_d_to_a"
+        app:layout_constraintTop_toTopOf="@+id/add_d_to_a" />
+
+    <Button
+        android:id="@+id/add_d_to_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Add D to B"
+        app:layout_constraintStart_toEndOf="@+id/replace_d_to_b"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_d_to_a" />
+
+    <Button
+        android:id="@+id/replace_d_to_b"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="replace D to B"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_d_to_b"
+        app:layout_constraintTop_toTopOf="@+id/add_d_to_b" />
+
+    <Button
+        android:id="@+id/add_d_to_c"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Add D to C"
+        app:layout_constraintStart_toEndOf="@+id/replace_d_to_c"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_d_to_b" />
+
+    <Button
+        android:id="@+id/replace_d_to_c"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="replace D to C"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/add_d_to_c"
+        app:layout_constraintTop_toTopOf="@+id/add_d_to_c" />
+
+    <Button
+        android:id="@+id/finish"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="Finish"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_d_to_c" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
